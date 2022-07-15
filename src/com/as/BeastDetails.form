@@ -1,0 +1,1771 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.as.BeastDetails">
+  <grid id="27dc6" binding="Details" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="1376" height="583"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <tabbedpane id="932a5" binding="tabbedPane1" default-binding="true">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="200" height="200"/>
+          </grid>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <grid id="d550e" binding="Bestiarry" layout-manager="BorderLayout" hgap="0" vgap="0">
+            <constraints>
+              <tabbedpane title="Stats"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <grid id="d4a60" binding="Descryption" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="0">
+                <constraints border-constraint="North"/>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <component id="aa7e4" class="javax.swing.JLabel" binding="LName">
+                    <constraints/>
+                    <properties>
+                      <text value="Name"/>
+                    </properties>
+                  </component>
+                  <component id="2284f" class="javax.swing.JTextField" binding="Name">
+                    <constraints/>
+                    <properties>
+                      <minimumSize width="150" height="30"/>
+                      <preferredSize width="150" height="30"/>
+                    </properties>
+                  </component>
+                  <component id="dd103" class="javax.swing.JLabel" binding="LClass">
+                    <constraints/>
+                    <properties>
+                      <text value="Class"/>
+                    </properties>
+                  </component>
+                  <component id="11784" class="javax.swing.JTextField" binding="Class">
+                    <constraints/>
+                    <properties>
+                      <minimumSize width="100" height="30"/>
+                      <preferredSize width="100" height="30"/>
+                    </properties>
+                  </component>
+                  <component id="bc75b" class="javax.swing.JLabel" binding="LLevel">
+                    <constraints/>
+                    <properties>
+                      <text value="Level"/>
+                    </properties>
+                  </component>
+                  <component id="f7f61" class="javax.swing.JTextField" binding="Level">
+                    <constraints/>
+                    <properties>
+                      <enabled value="true"/>
+                      <minimumSize width="40" height="30"/>
+                      <preferredSize width="40" height="30"/>
+                    </properties>
+                  </component>
+                  <component id="4b878" class="javax.swing.JLabel" binding="LRace">
+                    <constraints/>
+                    <properties>
+                      <text value="Race"/>
+                    </properties>
+                  </component>
+                  <component id="e109f" class="javax.swing.JTextField" binding="Race">
+                    <constraints/>
+                    <properties>
+                      <minimumSize width="100" height="30"/>
+                      <preferredSize width="100" height="30"/>
+                    </properties>
+                  </component>
+                  <component id="cbb03" class="javax.swing.JLabel" binding="LAligment">
+                    <constraints/>
+                    <properties>
+                      <text value="Aligment"/>
+                    </properties>
+                  </component>
+                  <component id="d8078" class="javax.swing.JComboBox" binding="Aligment">
+                    <constraints/>
+                    <properties>
+                      <model>
+                        <item value="Lawful good (LG)"/>
+                        <item value="Neutral good (NG)"/>
+                        <item value="Chaotic good (CG)"/>
+                        <item value="Lawful neutral (LN)"/>
+                        <item value="Neutral (N)"/>
+                        <item value="Chaotic neutral (CN)"/>
+                        <item value="Lawful evil (LE)"/>
+                        <item value="Neutral evil (NE)"/>
+                        <item value="Chaotic evil (CE)"/>
+                      </model>
+                    </properties>
+                  </component>
+                  <component id="47391" class="javax.swing.JLabel" binding="LSize">
+                    <constraints/>
+                    <properties>
+                      <text value="Size"/>
+                    </properties>
+                  </component>
+                  <component id="6853d" class="javax.swing.JTextField" binding="Size">
+                    <constraints/>
+                    <properties>
+                      <minimumSize width="100" height="30"/>
+                      <preferredSize width="100" height="30"/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+              <grid id="36caf" binding="Stats" layout-manager="GridLayoutManager" row-count="7" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints border-constraint="West"/>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <component id="dc933" class="javax.swing.JLabel" binding="LStrength">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <text value="Strength"/>
+                    </properties>
+                  </component>
+                  <component id="eac78" class="javax.swing.JTextField" binding="VStrength">
+                    <constraints>
+                      <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <columns value="5"/>
+                      <editable value="true"/>
+                      <horizontalAlignment value="0"/>
+                    </properties>
+                    <clientProperties>
+                      <html.disable class="java.lang.Boolean" value="false"/>
+                    </clientProperties>
+                  </component>
+                  <component id="657ae" class="javax.swing.JLabel" binding="LDexteriy">
+                    <constraints>
+                      <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <text value="Dexterity"/>
+                    </properties>
+                  </component>
+                  <component id="36fe5" class="javax.swing.JTextField" binding="VDexterity">
+                    <constraints>
+                      <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <columns value="5"/>
+                      <editable value="true"/>
+                      <horizontalAlignment value="0"/>
+                    </properties>
+                    <clientProperties>
+                      <html.disable class="java.lang.Boolean" value="false"/>
+                    </clientProperties>
+                  </component>
+                  <component id="a25d2" class="javax.swing.JLabel" binding="LConstitution">
+                    <constraints>
+                      <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <text value="Constitution"/>
+                    </properties>
+                  </component>
+                  <component id="ce9fc" class="javax.swing.JTextField" binding="VConstitution">
+                    <constraints>
+                      <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <columns value="5"/>
+                      <editable value="true"/>
+                      <horizontalAlignment value="0"/>
+                    </properties>
+                    <clientProperties>
+                      <html.disable class="java.lang.Boolean" value="false"/>
+                    </clientProperties>
+                  </component>
+                  <component id="f67e8" class="javax.swing.JLabel" binding="LInteligence">
+                    <constraints>
+                      <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <text value="Inteligence"/>
+                    </properties>
+                  </component>
+                  <component id="5b74b" class="javax.swing.JTextField" binding="VInteligence">
+                    <constraints>
+                      <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <columns value="5"/>
+                      <editable value="true"/>
+                      <horizontalAlignment value="0"/>
+                    </properties>
+                    <clientProperties>
+                      <html.disable class="java.lang.Boolean" value="false"/>
+                    </clientProperties>
+                  </component>
+                  <component id="f4a46" class="javax.swing.JLabel" binding="LWisdom">
+                    <constraints>
+                      <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <text value="Wisdom"/>
+                    </properties>
+                  </component>
+                  <component id="3e89b" class="javax.swing.JTextField" binding="VWisdom">
+                    <constraints>
+                      <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <columns value="5"/>
+                      <editable value="true"/>
+                      <horizontalAlignment value="0"/>
+                    </properties>
+                    <clientProperties>
+                      <html.disable class="java.lang.Boolean" value="false"/>
+                    </clientProperties>
+                  </component>
+                  <component id="e84c2" class="javax.swing.JLabel" binding="LCharisma">
+                    <constraints>
+                      <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <text value="Charisma"/>
+                    </properties>
+                  </component>
+                  <component id="ede98" class="javax.swing.JTextField" binding="VCharisma">
+                    <constraints>
+                      <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <columns value="5"/>
+                      <editable value="true"/>
+                      <horizontalAlignment value="0"/>
+                    </properties>
+                    <clientProperties>
+                      <html.disable class="java.lang.Boolean" value="false"/>
+                    </clientProperties>
+                  </component>
+                  <component id="f7e24" class="javax.swing.JLabel" binding="LArkanizm">
+                    <constraints>
+                      <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <text value="Arcanum"/>
+                    </properties>
+                  </component>
+                  <component id="6af1d" class="javax.swing.JTextField" binding="VArkanizm">
+                    <constraints>
+                      <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <columns value="5"/>
+                      <editable value="true"/>
+                      <horizontalAlignment value="0"/>
+                    </properties>
+                    <clientProperties>
+                      <html.disable class="java.lang.Boolean" value="false"/>
+                    </clientProperties>
+                  </component>
+                  <component id="1c4c6" class="javax.swing.JTextField" binding="Strength">
+                    <constraints>
+                      <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <columns value="5"/>
+                      <editable value="true"/>
+                      <horizontalAlignment value="0"/>
+                    </properties>
+                    <clientProperties>
+                      <html.disable class="java.lang.Boolean" value="false"/>
+                    </clientProperties>
+                  </component>
+                  <component id="33314" class="javax.swing.JTextField" binding="Dexterity">
+                    <constraints>
+                      <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <columns value="5"/>
+                      <editable value="true"/>
+                      <horizontalAlignment value="0"/>
+                    </properties>
+                    <clientProperties>
+                      <html.disable class="java.lang.Boolean" value="false"/>
+                    </clientProperties>
+                  </component>
+                  <component id="66f0d" class="javax.swing.JTextField" binding="Constitution">
+                    <constraints>
+                      <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <columns value="5"/>
+                      <editable value="true"/>
+                      <horizontalAlignment value="0"/>
+                    </properties>
+                    <clientProperties>
+                      <html.disable class="java.lang.Boolean" value="false"/>
+                    </clientProperties>
+                  </component>
+                  <component id="73441" class="javax.swing.JTextField" binding="Inteligence">
+                    <constraints>
+                      <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <columns value="5"/>
+                      <editable value="true"/>
+                      <horizontalAlignment value="0"/>
+                    </properties>
+                    <clientProperties>
+                      <html.disable class="java.lang.Boolean" value="false"/>
+                    </clientProperties>
+                  </component>
+                  <component id="bd5c3" class="javax.swing.JTextField" binding="Wisdom">
+                    <constraints>
+                      <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <columns value="5"/>
+                      <editable value="true"/>
+                      <horizontalAlignment value="0"/>
+                    </properties>
+                    <clientProperties>
+                      <html.disable class="java.lang.Boolean" value="false"/>
+                    </clientProperties>
+                  </component>
+                  <component id="e68ad" class="javax.swing.JTextField" binding="Charisma">
+                    <constraints>
+                      <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <columns value="5"/>
+                      <editable value="true"/>
+                      <horizontalAlignment value="0"/>
+                    </properties>
+                    <clientProperties>
+                      <html.disable class="java.lang.Boolean" value="false"/>
+                    </clientProperties>
+                  </component>
+                  <component id="67e78" class="javax.swing.JTextField" binding="Arkanizm">
+                    <constraints>
+                      <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <columns value="5"/>
+                      <editable value="true"/>
+                      <horizontalAlignment value="0"/>
+                    </properties>
+                    <clientProperties>
+                      <html.disable class="java.lang.Boolean" value="false"/>
+                    </clientProperties>
+                  </component>
+                </children>
+              </grid>
+              <grid id="7f5ac" binding="bestiary2" layout-manager="BorderLayout" hgap="0" vgap="0">
+                <constraints border-constraint="Center"/>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <grid id="7b825" binding="SnS" layout-manager="BorderLayout" hgap="0" vgap="0">
+                    <constraints border-constraint="West"/>
+                    <properties/>
+                    <border type="none"/>
+                    <children>
+                      <grid id="74fa0" binding="SavThrow" layout-manager="GridLayoutManager" row-count="2" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="0" vgap="0">
+                        <margin top="0" left="0" bottom="0" right="0"/>
+                        <constraints border-constraint="North"/>
+                        <properties/>
+                        <border type="none"/>
+                        <children>
+                          <grid id="4dfe1" binding="STValues" layout-manager="GridLayoutManager" row-count="7" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                            <margin top="0" left="0" bottom="0" right="0"/>
+                            <constraints>
+                              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="2" indent="0" use-parent-layout="false">
+                                <preferred-size width="56" height="186"/>
+                              </grid>
+                            </constraints>
+                            <properties/>
+                            <border type="none">
+                              <color color="-16777216"/>
+                            </border>
+                            <children>
+                              <component id="ed2fa" class="javax.swing.JTextField" binding="VSTstr">
+                                <constraints>
+                                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                                </constraints>
+                                <properties>
+                                  <columns value="5"/>
+                                  <editable value="true"/>
+                                  <enabled value="true"/>
+                                  <horizontalAlignment value="0"/>
+                                </properties>
+                              </component>
+                              <component id="6913a" class="javax.swing.JTextField" binding="VSTdex">
+                                <constraints>
+                                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                                </constraints>
+                                <properties>
+                                  <columns value="5"/>
+                                  <editable value="true"/>
+                                  <horizontalAlignment value="0"/>
+                                </properties>
+                              </component>
+                              <component id="c5b8" class="javax.swing.JTextField" binding="VSTconst">
+                                <constraints>
+                                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                                </constraints>
+                                <properties>
+                                  <columns value="5"/>
+                                  <editable value="true"/>
+                                  <horizontalAlignment value="0"/>
+                                </properties>
+                              </component>
+                              <component id="2cbfb" class="javax.swing.JTextField" binding="VSTint">
+                                <constraints>
+                                  <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                                </constraints>
+                                <properties>
+                                  <columns value="5"/>
+                                  <editable value="true"/>
+                                  <horizontalAlignment value="0"/>
+                                </properties>
+                              </component>
+                              <component id="f06ee" class="javax.swing.JTextField" binding="VSTwis">
+                                <constraints>
+                                  <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                                </constraints>
+                                <properties>
+                                  <columns value="5"/>
+                                  <editable value="true"/>
+                                  <horizontalAlignment value="0"/>
+                                </properties>
+                              </component>
+                              <component id="6e445" class="javax.swing.JTextField" binding="VSTchar">
+                                <constraints>
+                                  <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                                </constraints>
+                                <properties>
+                                  <columns value="5"/>
+                                  <editable value="true"/>
+                                  <horizontalAlignment value="0"/>
+                                </properties>
+                              </component>
+                              <component id="c6da1" class="javax.swing.JTextField" binding="VSTarc">
+                                <constraints>
+                                  <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                                </constraints>
+                                <properties>
+                                  <columns value="5"/>
+                                  <editable value="true"/>
+                                  <horizontalAlignment value="0"/>
+                                </properties>
+                              </component>
+                            </children>
+                          </grid>
+                          <grid id="95144" binding="STLabels" layout-manager="GridLayoutManager" row-count="7" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                            <margin top="0" left="0" bottom="0" right="0"/>
+                            <constraints>
+                              <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="8" fill="2" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties/>
+                            <border type="none">
+                              <color color="-16777216"/>
+                            </border>
+                            <children>
+                              <component id="6f595" class="javax.swing.JLabel" binding="LSTstr">
+                                <constraints>
+                                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                                </constraints>
+                                <properties>
+                                  <text value="Strength"/>
+                                </properties>
+                              </component>
+                              <component id="f40d" class="javax.swing.JLabel" binding="LSTdex">
+                                <constraints>
+                                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                                </constraints>
+                                <properties>
+                                  <text value="Dexterity"/>
+                                </properties>
+                              </component>
+                              <component id="b039d" class="javax.swing.JLabel" binding="LSTconst">
+                                <constraints>
+                                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                                </constraints>
+                                <properties>
+                                  <text value="Constitution"/>
+                                </properties>
+                              </component>
+                              <component id="79076" class="javax.swing.JLabel" binding="LSTint">
+                                <constraints>
+                                  <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                                </constraints>
+                                <properties>
+                                  <text value="Inteligence"/>
+                                </properties>
+                              </component>
+                              <component id="36da0" class="javax.swing.JLabel" binding="LSTwis">
+                                <constraints>
+                                  <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                                </constraints>
+                                <properties>
+                                  <text value="Wisdom"/>
+                                </properties>
+                              </component>
+                              <component id="b0f02" class="javax.swing.JLabel" binding="LSTchar">
+                                <constraints>
+                                  <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                                </constraints>
+                                <properties>
+                                  <text value="Charisma"/>
+                                </properties>
+                              </component>
+                              <component id="e5b63" class="javax.swing.JLabel" binding="LSTarc">
+                                <constraints>
+                                  <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                                </constraints>
+                                <properties>
+                                  <text value="Arcanum"/>
+                                </properties>
+                              </component>
+                            </children>
+                          </grid>
+                          <component id="90c82" class="javax.swing.JLabel" binding="ST">
+                            <constraints>
+                              <grid row="0" column="0" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <text value="Saving Throws"/>
+                            </properties>
+                          </component>
+                        </children>
+                      </grid>
+                      <scrollpane id="6a85b" binding="SkillScroll">
+                        <constraints border-constraint="Center"/>
+                        <properties>
+                          <minimumSize width="212" height="200"/>
+                          <preferredSize width="271" height="200"/>
+                        </properties>
+                        <border type="none"/>
+                        <children>
+                          <grid id="afdd7" binding="Skills" layout-manager="GridLayoutManager" row-count="2" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                            <margin top="0" left="0" bottom="0" right="0"/>
+                            <constraints/>
+                            <properties>
+                              <autoscrolls value="true"/>
+                            </properties>
+                            <border type="none"/>
+                            <children>
+                              <component id="c9023" class="javax.swing.JLabel" binding="Sk">
+                                <constraints>
+                                  <grid row="0" column="0" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                                </constraints>
+                                <properties>
+                                  <text value="Skills"/>
+                                </properties>
+                              </component>
+                              <grid id="7c82e" binding="SLabels" layout-manager="GridLayoutManager" row-count="25" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                                <margin top="0" left="0" bottom="0" right="0"/>
+                                <constraints>
+                                  <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                                </constraints>
+                                <properties/>
+                                <border type="none"/>
+                                <children>
+                                  <component id="9c2d2" class="javax.swing.JLabel" binding="LAcrobatic">
+                                    <constraints>
+                                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                                    </constraints>
+                                    <properties>
+                                      <text value="Acrobatic (Dex)"/>
+                                    </properties>
+                                  </component>
+                                  <component id="f6475" class="javax.swing.JLabel" binding="LAnimal">
+                                    <constraints>
+                                      <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                                    </constraints>
+                                    <properties>
+                                      <text value="Animal Handling (Wis)"/>
+                                    </properties>
+                                  </component>
+                                  <component id="d685f" class="javax.swing.JLabel" binding="LArcana">
+                                    <constraints>
+                                      <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                                    </constraints>
+                                    <properties>
+                                      <text value="Arcane Knowledge (Int)"/>
+                                    </properties>
+                                  </component>
+                                  <component id="37b27" class="javax.swing.JLabel" binding="LAthletics">
+                                    <constraints>
+                                      <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                                    </constraints>
+                                    <properties>
+                                      <text value="Athletics (Str)"/>
+                                    </properties>
+                                  </component>
+                                  <component id="f3e58" class="javax.swing.JLabel" binding="LDeception">
+                                    <constraints>
+                                      <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                                    </constraints>
+                                    <properties>
+                                      <text value="Deception (Cha)"/>
+                                    </properties>
+                                  </component>
+                                  <component id="ea074" class="javax.swing.JLabel" binding="LHistory">
+                                    <constraints>
+                                      <grid row="9" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                                    </constraints>
+                                    <properties>
+                                      <text value="History (Int)"/>
+                                    </properties>
+                                  </component>
+                                  <component id="f3da1" class="javax.swing.JLabel" binding="LInsight">
+                                    <constraints>
+                                      <grid row="10" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                                    </constraints>
+                                    <properties>
+                                      <text value="Insight (Wis)"/>
+                                    </properties>
+                                  </component>
+                                  <component id="4fbab" class="javax.swing.JLabel" binding="LIntimidation">
+                                    <constraints>
+                                      <grid row="11" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                                    </constraints>
+                                    <properties>
+                                      <text value="Intimidation (Cha)"/>
+                                    </properties>
+                                  </component>
+                                  <component id="4ba83" class="javax.swing.JLabel" binding="LInvestigation">
+                                    <constraints>
+                                      <grid row="12" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                                    </constraints>
+                                    <properties>
+                                      <text value="Investigation (Int)"/>
+                                    </properties>
+                                  </component>
+                                  <component id="2f435" class="javax.swing.JLabel" binding="LMedicine">
+                                    <constraints>
+                                      <grid row="14" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                                    </constraints>
+                                    <properties>
+                                      <text value="Medicine (Wis)"/>
+                                    </properties>
+                                  </component>
+                                  <component id="e9c49" class="javax.swing.JLabel" binding="LNature">
+                                    <constraints>
+                                      <grid row="15" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                                    </constraints>
+                                    <properties>
+                                      <text value="Nature (Int)"/>
+                                    </properties>
+                                  </component>
+                                  <component id="f7dd5" class="javax.swing.JLabel" binding="LPerception">
+                                    <constraints>
+                                      <grid row="16" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                                    </constraints>
+                                    <properties>
+                                      <text value="Perception (Wis)"/>
+                                    </properties>
+                                  </component>
+                                  <component id="a3ec3" class="javax.swing.JLabel" binding="LPerformance">
+                                    <constraints>
+                                      <grid row="17" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                                    </constraints>
+                                    <properties>
+                                      <text value="Performance (Cha)"/>
+                                    </properties>
+                                  </component>
+                                  <component id="a91b6" class="javax.swing.JLabel" binding="LPersuasion">
+                                    <constraints>
+                                      <grid row="18" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                                    </constraints>
+                                    <properties>
+                                      <text value="Persuasion (Cha)"/>
+                                    </properties>
+                                  </component>
+                                  <component id="23373" class="javax.swing.JLabel" binding="LReligion">
+                                    <constraints>
+                                      <grid row="19" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                                    </constraints>
+                                    <properties>
+                                      <text value="Religion (Int)"/>
+                                    </properties>
+                                  </component>
+                                  <component id="84dca" class="javax.swing.JLabel" binding="LSoH">
+                                    <constraints>
+                                      <grid row="20" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                                    </constraints>
+                                    <properties>
+                                      <text value="Sleight of Hand (Dex)"/>
+                                    </properties>
+                                  </component>
+                                  <component id="e0db2" class="javax.swing.JLabel" binding="LStealth">
+                                    <constraints>
+                                      <grid row="22" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                                    </constraints>
+                                    <properties>
+                                      <text value="Stealth (Dex)"/>
+                                    </properties>
+                                  </component>
+                                  <component id="55c52" class="javax.swing.JLabel" binding="LSurvival">
+                                    <constraints>
+                                      <grid row="23" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                                    </constraints>
+                                    <properties>
+                                      <text value="Survival (Wis)"/>
+                                    </properties>
+                                  </component>
+                                  <component id="b9134" class="javax.swing.JLabel" binding="LPasiveWisdom">
+                                    <constraints>
+                                      <grid row="24" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                                    </constraints>
+                                    <properties>
+                                      <text value="Pasive Wisdom (Perception)"/>
+                                    </properties>
+                                  </component>
+                                  <component id="12dcc" class="javax.swing.JLabel" binding="LAlchemy">
+                                    <constraints>
+                                      <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                                    </constraints>
+                                    <properties>
+                                      <text value="Alchemy (Int)"/>
+                                    </properties>
+                                  </component>
+                                  <component id="52037" class="javax.swing.JLabel" binding="LArmorsmith">
+                                    <constraints>
+                                      <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                                    </constraints>
+                                    <properties>
+                                      <text value="Armorsmith (Str)"/>
+                                    </properties>
+                                  </component>
+                                  <component id="1fc77" class="javax.swing.JLabel" binding="Crafting">
+                                    <constraints>
+                                      <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                                    </constraints>
+                                    <properties>
+                                      <text value="Crafting (Dex)"/>
+                                    </properties>
+                                  </component>
+                                  <component id="48b3a" class="javax.swing.JLabel" binding="LEnchanting">
+                                    <constraints>
+                                      <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                                    </constraints>
+                                    <properties>
+                                      <text value="Enchanting (Arc)"/>
+                                    </properties>
+                                  </component>
+                                  <component id="18563" class="javax.swing.JLabel" binding="LMagicSenses">
+                                    <constraints>
+                                      <grid row="13" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                                    </constraints>
+                                    <properties>
+                                      <text value="Magic Senses (Arc)"/>
+                                    </properties>
+                                  </component>
+                                  <component id="20aaf" class="javax.swing.JLabel" binding="LSmithing">
+                                    <constraints>
+                                      <grid row="21" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                                    </constraints>
+                                    <properties>
+                                      <text value="Smithing (Str)"/>
+                                    </properties>
+                                  </component>
+                                </children>
+                              </grid>
+                              <grid id="82488" binding="SValues" layout-manager="GridLayoutManager" row-count="25" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                                <margin top="0" left="0" bottom="0" right="0"/>
+                                <constraints>
+                                  <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                                </constraints>
+                                <properties/>
+                                <border type="none"/>
+                                <children>
+                                  <component id="117f4" class="javax.swing.JTextField" binding="VAcrobatic">
+                                    <constraints>
+                                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                                    </constraints>
+                                    <properties>
+                                      <columns value="5"/>
+                                      <editable value="true"/>
+                                      <horizontalAlignment value="0"/>
+                                    </properties>
+                                  </component>
+                                  <component id="712b5" class="javax.swing.JTextField" binding="VAnimal">
+                                    <constraints>
+                                      <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                                    </constraints>
+                                    <properties>
+                                      <columns value="5"/>
+                                      <editable value="true"/>
+                                      <horizontalAlignment value="0"/>
+                                    </properties>
+                                  </component>
+                                  <component id="6321f" class="javax.swing.JTextField" binding="VArcana">
+                                    <constraints>
+                                      <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                                    </constraints>
+                                    <properties>
+                                      <columns value="5"/>
+                                      <editable value="true"/>
+                                      <horizontalAlignment value="0"/>
+                                    </properties>
+                                  </component>
+                                  <component id="ea9f7" class="javax.swing.JTextField" binding="VAthletics">
+                                    <constraints>
+                                      <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                                    </constraints>
+                                    <properties>
+                                      <columns value="5"/>
+                                      <editable value="true"/>
+                                      <horizontalAlignment value="0"/>
+                                    </properties>
+                                  </component>
+                                  <component id="5c064" class="javax.swing.JTextField" binding="VDeception">
+                                    <constraints>
+                                      <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                                    </constraints>
+                                    <properties>
+                                      <columns value="5"/>
+                                      <editable value="true"/>
+                                      <horizontalAlignment value="0"/>
+                                    </properties>
+                                  </component>
+                                  <component id="fd331" class="javax.swing.JTextField" binding="VHistory">
+                                    <constraints>
+                                      <grid row="9" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                                    </constraints>
+                                    <properties>
+                                      <columns value="5"/>
+                                      <editable value="true"/>
+                                      <horizontalAlignment value="0"/>
+                                    </properties>
+                                  </component>
+                                  <component id="3dbac" class="javax.swing.JTextField" binding="VInsight">
+                                    <constraints>
+                                      <grid row="10" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                                    </constraints>
+                                    <properties>
+                                      <columns value="5"/>
+                                      <editable value="true"/>
+                                      <horizontalAlignment value="0"/>
+                                    </properties>
+                                  </component>
+                                  <component id="159c0" class="javax.swing.JTextField" binding="VIntimidation">
+                                    <constraints>
+                                      <grid row="11" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                                    </constraints>
+                                    <properties>
+                                      <columns value="5"/>
+                                      <editable value="true"/>
+                                      <horizontalAlignment value="0"/>
+                                    </properties>
+                                  </component>
+                                  <component id="3b6bb" class="javax.swing.JTextField" binding="VInvestigation">
+                                    <constraints>
+                                      <grid row="12" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                                    </constraints>
+                                    <properties>
+                                      <columns value="5"/>
+                                      <editable value="true"/>
+                                      <horizontalAlignment value="0"/>
+                                    </properties>
+                                  </component>
+                                  <component id="45ca8" class="javax.swing.JTextField" binding="VMedicine">
+                                    <constraints>
+                                      <grid row="14" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                                    </constraints>
+                                    <properties>
+                                      <columns value="5"/>
+                                      <editable value="true"/>
+                                      <horizontalAlignment value="0"/>
+                                    </properties>
+                                  </component>
+                                  <component id="2c468" class="javax.swing.JTextField" binding="VNature">
+                                    <constraints>
+                                      <grid row="15" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                                    </constraints>
+                                    <properties>
+                                      <columns value="5"/>
+                                      <editable value="true"/>
+                                      <horizontalAlignment value="0"/>
+                                    </properties>
+                                  </component>
+                                  <component id="43372" class="javax.swing.JTextField" binding="VPerception">
+                                    <constraints>
+                                      <grid row="16" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                                    </constraints>
+                                    <properties>
+                                      <columns value="5"/>
+                                      <editable value="true"/>
+                                      <horizontalAlignment value="0"/>
+                                    </properties>
+                                  </component>
+                                  <component id="501e2" class="javax.swing.JTextField" binding="VPerformance">
+                                    <constraints>
+                                      <grid row="17" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                                    </constraints>
+                                    <properties>
+                                      <columns value="5"/>
+                                      <editable value="true"/>
+                                      <horizontalAlignment value="0"/>
+                                    </properties>
+                                  </component>
+                                  <component id="be3fd" class="javax.swing.JTextField" binding="VPersuasion">
+                                    <constraints>
+                                      <grid row="18" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                                    </constraints>
+                                    <properties>
+                                      <columns value="5"/>
+                                      <editable value="true"/>
+                                      <horizontalAlignment value="0"/>
+                                    </properties>
+                                  </component>
+                                  <component id="49390" class="javax.swing.JTextField" binding="VReligion">
+                                    <constraints>
+                                      <grid row="19" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                                    </constraints>
+                                    <properties>
+                                      <columns value="5"/>
+                                      <editable value="true"/>
+                                      <horizontalAlignment value="0"/>
+                                    </properties>
+                                  </component>
+                                  <component id="ff9c3" class="javax.swing.JTextField" binding="VSoH">
+                                    <constraints>
+                                      <grid row="20" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                                    </constraints>
+                                    <properties>
+                                      <columns value="5"/>
+                                      <editable value="true"/>
+                                      <horizontalAlignment value="0"/>
+                                    </properties>
+                                  </component>
+                                  <component id="511fe" class="javax.swing.JTextField" binding="VStealth">
+                                    <constraints>
+                                      <grid row="22" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                                    </constraints>
+                                    <properties>
+                                      <columns value="5"/>
+                                      <editable value="true"/>
+                                      <horizontalAlignment value="0"/>
+                                    </properties>
+                                  </component>
+                                  <component id="1b27b" class="javax.swing.JTextField" binding="VSurvival">
+                                    <constraints>
+                                      <grid row="23" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                                    </constraints>
+                                    <properties>
+                                      <columns value="5"/>
+                                      <editable value="true"/>
+                                      <horizontalAlignment value="0"/>
+                                    </properties>
+                                  </component>
+                                  <component id="29d73" class="javax.swing.JTextField" binding="VPasiveWisdom">
+                                    <constraints>
+                                      <grid row="24" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                                    </constraints>
+                                    <properties>
+                                      <columns value="5"/>
+                                      <editable value="true"/>
+                                      <horizontalAlignment value="0"/>
+                                    </properties>
+                                  </component>
+                                  <component id="6cbfb" class="javax.swing.JTextField" binding="VAlchemy">
+                                    <constraints>
+                                      <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                                    </constraints>
+                                    <properties>
+                                      <columns value="5"/>
+                                      <editable value="true"/>
+                                      <horizontalAlignment value="0"/>
+                                    </properties>
+                                  </component>
+                                  <component id="c7632" class="javax.swing.JTextField" binding="VArmorsmith">
+                                    <constraints>
+                                      <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                                    </constraints>
+                                    <properties>
+                                      <columns value="5"/>
+                                      <editable value="true"/>
+                                      <horizontalAlignment value="0"/>
+                                    </properties>
+                                  </component>
+                                  <component id="ecf08" class="javax.swing.JTextField" binding="VCrafting">
+                                    <constraints>
+                                      <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                                    </constraints>
+                                    <properties>
+                                      <columns value="5"/>
+                                      <editable value="true"/>
+                                      <horizontalAlignment value="0"/>
+                                    </properties>
+                                  </component>
+                                  <component id="b1104" class="javax.swing.JTextField" binding="VEnchanting">
+                                    <constraints>
+                                      <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                                    </constraints>
+                                    <properties>
+                                      <columns value="5"/>
+                                      <editable value="true"/>
+                                      <horizontalAlignment value="0"/>
+                                    </properties>
+                                  </component>
+                                  <component id="6bf32" class="javax.swing.JTextField" binding="VMagicSenses">
+                                    <constraints>
+                                      <grid row="13" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                                    </constraints>
+                                    <properties>
+                                      <columns value="5"/>
+                                      <editable value="true"/>
+                                      <horizontalAlignment value="0"/>
+                                    </properties>
+                                  </component>
+                                  <component id="94f94" class="javax.swing.JTextField" binding="VSmithing">
+                                    <constraints>
+                                      <grid row="21" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                                    </constraints>
+                                    <properties>
+                                      <columns value="5"/>
+                                      <editable value="true"/>
+                                      <horizontalAlignment value="0"/>
+                                    </properties>
+                                  </component>
+                                </children>
+                              </grid>
+                            </children>
+                          </grid>
+                        </children>
+                      </scrollpane>
+                    </children>
+                  </grid>
+                  <grid id="22442" binding="Combat" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="0">
+                    <constraints border-constraint="North"/>
+                    <properties/>
+                    <border type="none"/>
+                    <children>
+                      <component id="ce48" class="javax.swing.JLabel" binding="LProfieciency">
+                        <constraints/>
+                        <properties>
+                          <text value="Profieciency"/>
+                        </properties>
+                      </component>
+                      <component id="c3294" class="javax.swing.JTextField" binding="Profieciency">
+                        <constraints/>
+                        <properties>
+                          <horizontalAlignment value="0"/>
+                          <minimumSize width="50" height="30"/>
+                          <preferredSize width="50" height="30"/>
+                        </properties>
+                      </component>
+                      <component id="9819e" class="javax.swing.JLabel" binding="Lac">
+                        <constraints/>
+                        <properties>
+                          <text value="Armor Classes:"/>
+                        </properties>
+                      </component>
+                      <component id="570b1" class="javax.swing.JLabel">
+                        <constraints/>
+                        <properties>
+                          <text value="Slashing"/>
+                        </properties>
+                      </component>
+                      <component id="ec7c6" class="javax.swing.JTextField" binding="ACSieczne">
+                        <constraints/>
+                        <properties>
+                          <horizontalAlignment value="0"/>
+                          <minimumSize width="50" height="30"/>
+                          <preferredSize width="50" height="30"/>
+                        </properties>
+                      </component>
+                      <component id="5ddc6" class="javax.swing.JLabel">
+                        <constraints/>
+                        <properties>
+                          <text value="Blunt"/>
+                        </properties>
+                      </component>
+                      <component id="f8417" class="javax.swing.JTextField" binding="ACObuch">
+                        <constraints/>
+                        <properties>
+                          <horizontalAlignment value="0"/>
+                          <minimumSize width="50" height="30"/>
+                          <preferredSize width="50" height="30"/>
+                        </properties>
+                      </component>
+                      <component id="dd222" class="javax.swing.JLabel">
+                        <constraints/>
+                        <properties>
+                          <text value="Piercing"/>
+                        </properties>
+                      </component>
+                      <component id="df502" class="javax.swing.JTextField" binding="ACKlote">
+                        <constraints/>
+                        <properties>
+                          <horizontalAlignment value="0"/>
+                          <minimumSize width="50" height="30"/>
+                          <preferredSize width="50" height="30"/>
+                        </properties>
+                      </component>
+                      <component id="15c89" class="javax.swing.JLabel" binding="LInitiative">
+                        <constraints/>
+                        <properties>
+                          <text value="Initiative"/>
+                        </properties>
+                      </component>
+                      <component id="71eb8" class="javax.swing.JTextField" binding="Initiative">
+                        <constraints/>
+                        <properties>
+                          <horizontalAlignment value="0"/>
+                          <minimumSize width="50" height="30"/>
+                          <preferredSize width="50" height="30"/>
+                        </properties>
+                      </component>
+                      <component id="3c15f" class="javax.swing.JLabel" binding="LSpeed">
+                        <constraints/>
+                        <properties>
+                          <text value="Speed"/>
+                        </properties>
+                      </component>
+                      <component id="b803c" class="javax.swing.JTextField" binding="Speed">
+                        <constraints/>
+                        <properties>
+                          <horizontalAlignment value="0"/>
+                          <minimumSize width="50" height="30"/>
+                          <preferredSize width="50" height="30"/>
+                        </properties>
+                      </component>
+                      <component id="3ec3" class="javax.swing.JLabel" binding="LHitPoints">
+                        <constraints/>
+                        <properties>
+                          <text value="Max Hit Points"/>
+                        </properties>
+                      </component>
+                      <component id="43a86" class="javax.swing.JTextField" binding="HitPoints">
+                        <constraints/>
+                        <properties>
+                          <horizontalAlignment value="0"/>
+                          <minimumSize width="50" height="30"/>
+                          <preferredSize width="50" height="30"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="7d751" binding="Info" layout-manager="GridLayoutManager" row-count="2" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints border-constraint="Center"/>
+                    <properties/>
+                    <border type="none"/>
+                    <children>
+                      <scrollpane id="bfd83" binding="FnT">
+                        <constraints>
+                          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties/>
+                        <border type="none"/>
+                        <children>
+                          <component id="36805" class="javax.swing.JTextArea" binding="VFnT">
+                            <constraints/>
+                            <properties>
+                              <lineWrap value="true"/>
+                              <wrapStyleWord value="true"/>
+                            </properties>
+                          </component>
+                        </children>
+                      </scrollpane>
+                      <scrollpane id="35924" binding="Eq">
+                        <constraints>
+                          <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties/>
+                        <border type="none"/>
+                        <children>
+                          <component id="fb8ae" class="javax.swing.JTextArea" binding="VEq">
+                            <constraints/>
+                            <properties>
+                              <lineWrap value="true"/>
+                              <wrapStyleWord value="true"/>
+                            </properties>
+                          </component>
+                        </children>
+                      </scrollpane>
+                      <scrollpane id="81d42" binding="LangnProf">
+                        <constraints>
+                          <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties/>
+                        <border type="none"/>
+                        <children>
+                          <component id="ccdb2" class="javax.swing.JTextArea" binding="VLnP">
+                            <constraints/>
+                            <properties>
+                              <lineWrap value="true"/>
+                              <wrapStyleWord value="true"/>
+                            </properties>
+                          </component>
+                        </children>
+                      </scrollpane>
+                      <component id="92625" class="javax.swing.JLabel" binding="LAnS">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <text value="Attacks and Spellcasting"/>
+                        </properties>
+                      </component>
+                      <component id="90965" class="javax.swing.JLabel" binding="LFnT">
+                        <constraints>
+                          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <text value="Features and Traits"/>
+                        </properties>
+                      </component>
+                      <component id="f7066" class="javax.swing.JLabel" binding="LEq">
+                        <constraints>
+                          <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <text value="Equipment"/>
+                        </properties>
+                      </component>
+                      <component id="e66ed" class="javax.swing.JLabel" binding="LLnP">
+                        <constraints>
+                          <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <text value="Languages and Prof"/>
+                        </properties>
+                      </component>
+                      <scrollpane id="cfa8f" binding="ScrollAnS">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties/>
+                        <border type="none"/>
+                        <children>
+                          <component id="f4ccf" class="javax.swing.JTextArea" binding="VAnS">
+                            <constraints/>
+                            <properties>
+                              <lineWrap value="true"/>
+                              <wrapStyleWord value="true"/>
+                            </properties>
+                          </component>
+                        </children>
+                      </scrollpane>
+                    </children>
+                  </grid>
+                </children>
+              </grid>
+            </children>
+          </grid>
+          <grid id="47ecb" binding="Spells" layout-manager="GridLayoutManager" row-count="2" column-count="18" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <tabbedpane title="Spells"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <scrollpane id="a7b6d" binding="SpellsScroll">
+                <constraints>
+                  <grid row="1" column="1" row-span="1" col-span="17" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <grid id="d76ad" binding="Circles" layout-manager="GridLayoutManager" row-count="1" column-count="10" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints/>
+                    <properties/>
+                    <border type="none"/>
+                    <children>
+                      <grid id="f4542" binding="Cantrips" layout-manager="GridLayoutManager" row-count="2" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                        <margin top="0" left="0" bottom="0" right="0"/>
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties/>
+                        <border type="none"/>
+                        <children>
+                          <scrollpane id="40b80" binding="CantripScrollPane">
+                            <constraints>
+                              <grid row="1" column="0" row-span="1" col-span="3" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties/>
+                            <border type="none"/>
+                            <children>
+                              <grid id="6430e" binding="CantripPane" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                                <margin top="0" left="0" bottom="0" right="0"/>
+                                <constraints/>
+                                <properties/>
+                                <border type="none"/>
+                                <children/>
+                              </grid>
+                            </children>
+                          </scrollpane>
+                          <component id="bc88b" class="javax.swing.JLabel" binding="LCantrips">
+                            <constraints>
+                              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <text value="Cantrips"/>
+                            </properties>
+                          </component>
+                        </children>
+                      </grid>
+                      <grid id="f3c65" binding="First" layout-manager="GridLayoutManager" row-count="2" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                        <margin top="0" left="0" bottom="0" right="0"/>
+                        <constraints>
+                          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties/>
+                        <border type="none"/>
+                        <children>
+                          <scrollpane id="d3ce4" binding="FirstScrollPane">
+                            <constraints>
+                              <grid row="1" column="0" row-span="1" col-span="3" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties/>
+                            <border type="none"/>
+                            <children>
+                              <grid id="8ceda" binding="FirstPane" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                                <margin top="0" left="0" bottom="0" right="0"/>
+                                <constraints/>
+                                <properties/>
+                                <border type="none"/>
+                                <children/>
+                              </grid>
+                            </children>
+                          </scrollpane>
+                          <component id="6b199" class="javax.swing.JLabel" binding="FirstSpell">
+                            <constraints>
+                              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <text value="1"/>
+                            </properties>
+                          </component>
+                        </children>
+                      </grid>
+                      <grid id="dd419" binding="Second" layout-manager="GridLayoutManager" row-count="2" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                        <margin top="0" left="0" bottom="0" right="0"/>
+                        <constraints>
+                          <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties/>
+                        <border type="none"/>
+                        <children>
+                          <scrollpane id="606ea" binding="SecondScrollPane">
+                            <constraints>
+                              <grid row="1" column="0" row-span="1" col-span="3" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties/>
+                            <border type="none"/>
+                            <children>
+                              <grid id="c3932" binding="SecondPane" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                                <margin top="0" left="0" bottom="0" right="0"/>
+                                <constraints/>
+                                <properties/>
+                                <border type="none"/>
+                                <children/>
+                              </grid>
+                            </children>
+                          </scrollpane>
+                          <component id="740c5" class="javax.swing.JLabel" binding="SecondSpell">
+                            <constraints>
+                              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <text value="2"/>
+                            </properties>
+                          </component>
+                        </children>
+                      </grid>
+                      <grid id="20fd9" binding="Third" layout-manager="GridLayoutManager" row-count="2" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                        <margin top="0" left="0" bottom="0" right="0"/>
+                        <constraints>
+                          <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties/>
+                        <border type="none"/>
+                        <children>
+                          <scrollpane id="f3e8d" binding="ThirdScrollPane">
+                            <constraints>
+                              <grid row="1" column="0" row-span="1" col-span="3" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties/>
+                            <border type="none"/>
+                            <children>
+                              <grid id="b5d95" binding="ThirdPane" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                                <margin top="0" left="0" bottom="0" right="0"/>
+                                <constraints/>
+                                <properties/>
+                                <border type="none"/>
+                                <children/>
+                              </grid>
+                            </children>
+                          </scrollpane>
+                          <component id="f7cce" class="javax.swing.JLabel" binding="ThirdSpell">
+                            <constraints>
+                              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <text value="3"/>
+                            </properties>
+                          </component>
+                        </children>
+                      </grid>
+                      <grid id="ebf13" binding="Forth" layout-manager="GridLayoutManager" row-count="2" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                        <margin top="0" left="0" bottom="0" right="0"/>
+                        <constraints>
+                          <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties/>
+                        <border type="none"/>
+                        <children>
+                          <scrollpane id="459aa" binding="ForthScrollPane">
+                            <constraints>
+                              <grid row="1" column="0" row-span="1" col-span="3" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties/>
+                            <border type="none"/>
+                            <children>
+                              <grid id="c3240" binding="ForthPane" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                                <margin top="0" left="0" bottom="0" right="0"/>
+                                <constraints/>
+                                <properties/>
+                                <border type="none"/>
+                                <children/>
+                              </grid>
+                            </children>
+                          </scrollpane>
+                          <component id="45a2e" class="javax.swing.JLabel" binding="ForthSpell">
+                            <constraints>
+                              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <text value="4"/>
+                            </properties>
+                          </component>
+                        </children>
+                      </grid>
+                      <grid id="b2fe9" binding="Fifth" layout-manager="GridLayoutManager" row-count="2" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                        <margin top="0" left="0" bottom="0" right="0"/>
+                        <constraints>
+                          <grid row="0" column="5" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties/>
+                        <border type="none"/>
+                        <children>
+                          <scrollpane id="3ee3c" binding="FifthScrollPane">
+                            <constraints>
+                              <grid row="1" column="0" row-span="1" col-span="3" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties/>
+                            <border type="none"/>
+                            <children>
+                              <grid id="96f02" binding="FifthPane" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                                <margin top="0" left="0" bottom="0" right="0"/>
+                                <constraints/>
+                                <properties/>
+                                <border type="none"/>
+                                <children/>
+                              </grid>
+                            </children>
+                          </scrollpane>
+                          <component id="79f10" class="javax.swing.JLabel" binding="FifthSpell">
+                            <constraints>
+                              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <text value="5"/>
+                            </properties>
+                          </component>
+                        </children>
+                      </grid>
+                      <grid id="831d3" binding="Sixth" layout-manager="GridLayoutManager" row-count="2" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                        <margin top="0" left="0" bottom="0" right="0"/>
+                        <constraints>
+                          <grid row="0" column="6" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties/>
+                        <border type="none"/>
+                        <children>
+                          <scrollpane id="97707" binding="SixthScrollPane">
+                            <constraints>
+                              <grid row="1" column="0" row-span="1" col-span="3" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties/>
+                            <border type="none"/>
+                            <children>
+                              <grid id="93172" binding="SixthPane" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                                <margin top="0" left="0" bottom="0" right="0"/>
+                                <constraints/>
+                                <properties/>
+                                <border type="none"/>
+                                <children/>
+                              </grid>
+                            </children>
+                          </scrollpane>
+                          <component id="94d8e" class="javax.swing.JLabel" binding="SixthSpell">
+                            <constraints>
+                              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <text value="6"/>
+                            </properties>
+                          </component>
+                        </children>
+                      </grid>
+                      <grid id="1749d" binding="Seventh" layout-manager="GridLayoutManager" row-count="2" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                        <margin top="0" left="0" bottom="0" right="0"/>
+                        <constraints>
+                          <grid row="0" column="7" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties/>
+                        <border type="none"/>
+                        <children>
+                          <scrollpane id="1f431" binding="SeventhScrollPane">
+                            <constraints>
+                              <grid row="1" column="0" row-span="1" col-span="3" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties/>
+                            <border type="none"/>
+                            <children>
+                              <grid id="90774" binding="SeventhPane" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                                <margin top="0" left="0" bottom="0" right="0"/>
+                                <constraints/>
+                                <properties/>
+                                <border type="none"/>
+                                <children/>
+                              </grid>
+                            </children>
+                          </scrollpane>
+                          <component id="44b26" class="javax.swing.JLabel" binding="SeventhSpell">
+                            <constraints>
+                              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <text value="7"/>
+                            </properties>
+                          </component>
+                        </children>
+                      </grid>
+                      <grid id="4e1b1" binding="Eighth" layout-manager="GridLayoutManager" row-count="2" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                        <margin top="0" left="0" bottom="0" right="0"/>
+                        <constraints>
+                          <grid row="0" column="8" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties/>
+                        <border type="none"/>
+                        <children>
+                          <scrollpane id="d58c" binding="EighthScrollPane">
+                            <constraints>
+                              <grid row="1" column="0" row-span="1" col-span="3" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties/>
+                            <border type="none"/>
+                            <children>
+                              <grid id="a6ea6" binding="EighthPane" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                                <margin top="0" left="0" bottom="0" right="0"/>
+                                <constraints/>
+                                <properties/>
+                                <border type="none"/>
+                                <children/>
+                              </grid>
+                            </children>
+                          </scrollpane>
+                          <component id="9a19c" class="javax.swing.JLabel" binding="EighthSpell">
+                            <constraints>
+                              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <text value="8"/>
+                            </properties>
+                          </component>
+                        </children>
+                      </grid>
+                      <grid id="9a7f4" binding="Ninth" layout-manager="GridLayoutManager" row-count="2" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                        <margin top="0" left="0" bottom="0" right="0"/>
+                        <constraints>
+                          <grid row="0" column="9" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties/>
+                        <border type="none"/>
+                        <children>
+                          <scrollpane id="c0a25" binding="NinthScrollPane">
+                            <constraints>
+                              <grid row="1" column="0" row-span="1" col-span="3" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties/>
+                            <border type="none"/>
+                            <children>
+                              <grid id="bd1d8" binding="NinthPane" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                                <margin top="0" left="0" bottom="0" right="0"/>
+                                <constraints/>
+                                <properties/>
+                                <border type="none"/>
+                                <children/>
+                              </grid>
+                            </children>
+                          </scrollpane>
+                          <component id="d9db3" class="javax.swing.JLabel" binding="NinthSpell">
+                            <constraints>
+                              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <text value="9"/>
+                            </properties>
+                          </component>
+                        </children>
+                      </grid>
+                    </children>
+                  </grid>
+                </children>
+              </scrollpane>
+              <component id="cf961" class="javax.swing.JComboBox" binding="SpellcastingClass">
+                <constraints>
+                  <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <enabled value="true"/>
+                  <model>
+                    <item value="Barbarian"/>
+                    <item value="Bard"/>
+                    <item value="Sorcerer"/>
+                    <item value="Warlock"/>
+                    <item value="Druid"/>
+                    <item value="Cleric"/>
+                    <item value="Rogue"/>
+                    <item value="Ranger"/>
+                    <item value="Mage"/>
+                    <item value="Monk"/>
+                    <item value="Palladin"/>
+                    <item value="Artificer"/>
+                    <item value="Fighter"/>
+                  </model>
+                </properties>
+              </component>
+              <component id="55956" class="javax.swing.JLabel" binding="Lsc">
+                <constraints>
+                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Spellcasting class"/>
+                </properties>
+              </component>
+              <component id="54109" class="javax.swing.JLabel" binding="Lsa">
+                <constraints>
+                  <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Spellcasting Ability"/>
+                </properties>
+              </component>
+              <component id="2bf02" class="javax.swing.JComboBox" binding="VSpellType">
+                <constraints>
+                  <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <model>
+                    <item value="Inteligence"/>
+                    <item value="Wisdom"/>
+                    <item value="Charisma"/>
+                    <item value="Arcanum"/>
+                  </model>
+                </properties>
+              </component>
+              <component id="606d" class="javax.swing.JLabel" binding="LsDC">
+                <constraints>
+                  <grid row="0" column="5" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Spell Save DC"/>
+                </properties>
+              </component>
+              <scrollpane id="4b725">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <component id="77386" class="javax.swing.JTextArea" binding="notes">
+                    <constraints/>
+                    <properties>
+                      <columns value="0"/>
+                      <lineWrap value="true"/>
+                      <minimumSize width="100" height="17"/>
+                      <preferredSize width="200" height="17"/>
+                      <requestFocusEnabled value="true"/>
+                      <wrapStyleWord value="true"/>
+                    </properties>
+                  </component>
+                </children>
+              </scrollpane>
+              <component id="19af6" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Spell notes                  "/>
+                </properties>
+              </component>
+              <component id="950f8" class="javax.swing.JLabel" binding="LSpellAB">
+                <constraints>
+                  <grid row="0" column="8" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Spell Atack Bonus"/>
+                </properties>
+              </component>
+              <component id="22cc4" class="javax.swing.JTextField" binding="AMana">
+                <constraints>
+                  <grid row="0" column="11" row-span="1" col-span="7" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <columns value="10"/>
+                  <minimumSize width="50" height="30"/>
+                  <preferredSize width="116" height="30"/>
+                </properties>
+              </component>
+              <component id="134ba" class="javax.swing.JTextField" binding="VSpellAB">
+                <constraints>
+                  <grid row="0" column="9" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <columns value="5"/>
+                  <minimumSize width="50" height="30"/>
+                  <preferredSize width="61" height="30"/>
+                </properties>
+              </component>
+              <component id="1f382" class="javax.swing.JTextField" binding="VSpellDC">
+                <constraints>
+                  <grid row="0" column="6" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <columns value="5"/>
+                  <minimumSize width="50" height="30"/>
+                  <preferredSize width="61" height="30"/>
+                </properties>
+              </component>
+              <component id="b720b" class="javax.swing.JLabel" binding="LMana">
+                <constraints>
+                  <grid row="0" column="10" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Mana"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+        </children>
+      </tabbedpane>
+    </children>
+  </grid>
+</form>
