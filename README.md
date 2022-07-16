@@ -1,6 +1,6 @@
 # D&D 5e Bestiary, Spellbook and Combat Tracker (sligthly modified 5e, but you don't need to use all of the fields if you don't want to)
 
-IMPORTANT: To run it you need to install Java 17.
+IMPORTANT: To run it, you need to install Java 17.
 
 Swing app made on Java for dugeonmasters and maybe if you want to make your character and use it here since your gm can send you spellbook and you can reference spells more easly than by looking on the internet.
 
