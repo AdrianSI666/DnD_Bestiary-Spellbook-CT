@@ -93,6 +93,11 @@ public class CombatTracker {
         Templatedetails.setEnabled(false);
         JButton Templatecopy = new JButton("Copy");
         Templatecopy.setEnabled(false);
+        JTextField TemplatedmgDelt = new JTextField("How much dmg");
+        TemplatedmgDelt.setColumns(8);
+        TemplatedmgDelt.setEnabled(false);
+        JButton TemplateDealButton = new JButton("Deal dmg");
+        TemplateDealButton.setEnabled(false);
         template.add(Templateinitiative);
         template.add(Templatename);
         template.add(Templateattacks);
@@ -107,6 +112,8 @@ public class CombatTracker {
         template.add(Templatedelete);
         template.add(Templatedetails);
         template.add(Templatecopy);
+        template.add(TemplatedmgDelt);
+        template.add(TemplateDealButton);
         BeastsTemplate.add(template);
         BeastsTemplate.revalidate();
         AddButton.addActionListener(e -> {
@@ -335,6 +342,22 @@ public class CombatTracker {
                 CreaturesPane.remove(copyPanel);
                 CreaturesPane.revalidate();
             });
+            JTextField CopydmgDelt=new JTextField();
+            CopydmgDelt.setColumns(8);
+            JButton CopydmgDeltButton = new JButton("Deal dmg");
+            CopydmgDeltButton.addActionListener(e->{
+                try{
+                    int Copydmg = Integer.parseInt(CopydmgDelt.getText());
+                    int Copyhp =  Integer.parseInt(Copycurhp.getText());
+                    int CopymaxHp = Integer.parseInt(Copymaxhp.getText());
+                    if(Copydmg<0&&Copyhp-Copydmg>CopymaxHp)Copycurhp.setText(CopymaxHp+"");
+                    else {
+                        Copycurhp.setText(Copyhp-Copydmg + "");
+                    }
+                }catch (NumberFormatException exception){
+                    CopydmgDelt.setText("Can't convert hp to number");
+                }
+            });
             copyPanel.add(Copyinitiative);
             copyPanel.add(Copyname);
             copyPanel.add(Copyattacks);
@@ -347,9 +370,27 @@ public class CombatTracker {
             copyPanel.add(Copymana);
             copyPanel.add(Copystatuses);
             copyPanel.add(Copydelete);
+            copyPanel.add(CopydmgDelt);
+            copyPanel.add(CopydmgDeltButton);
             currentBattle.add(copyBeast);
             CreaturesPane.add(copyPanel);
             CreaturesPane.revalidate();
+        });
+        JTextField dmgDelt=new JTextField();
+        dmgDelt.setColumns(8);
+        JButton dmgDeltButton = new JButton("Deal dmg");
+        dmgDeltButton.addActionListener(e->{
+            try{
+                int dmg = Integer.parseInt(dmgDelt.getText());
+                int hp =  Integer.parseInt(curhp.getText());
+                int maxHp = Integer.parseInt(maxhp.getText());
+                if(dmg<0&&hp-dmg>maxHp)curhp.setText(maxHp+"");
+                else {
+                    curhp.setText(hp-dmg + "");
+                }
+            }catch (NumberFormatException exception){
+                dmgDelt.setText("Can't convert hp to number");
+            }
         });
         newBeast.add(initiative);
         newBeast.add(name);
@@ -365,6 +406,8 @@ public class CombatTracker {
         newBeast.add(delete);
         newBeast.add(details);
         newBeast.add(copy);
+        newBeast.add(dmgDelt);
+        newBeast.add(dmgDeltButton);
         if (saving) currentBattle.add(beast[0]);
         CreaturesPane.add(newBeast);
     }

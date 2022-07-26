@@ -842,6 +842,10 @@ public class Bestiary extends JFrame {
             }
             saved = true;
             saveToFile();
+            beastSideList.clear();
+            beastSideList.addAll(beastList.beasts);
+            resetSideList();
+            readSideList();
         });
         newButton.addActionListener(e -> {
             if (getMod(VId) < beastList.beasts.size()) {
