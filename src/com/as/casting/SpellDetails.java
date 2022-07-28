@@ -1,10 +1,13 @@
 package com.as.casting;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.List;
 import java.util.UUID;
 
 public class SpellDetails implements Serializable {
+    @Serial
+    private static final long serialVersionUID = 4L;
     private final UUID id;
     private int level;
     private String name;

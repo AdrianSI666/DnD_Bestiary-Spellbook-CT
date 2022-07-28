@@ -1,8 +1,11 @@
 package com.as;
 
+import java.io.Serial;
 import java.io.Serializable;
 
 public class Spell implements Serializable {
+    @Serial
+    private static final long serialVersionUID = 9L;
     private String name;
     private String manacost;
     private String description;

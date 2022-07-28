@@ -1,5 +1,6 @@
 package com.as.casting;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -7,6 +8,8 @@ import java.util.UUID;
 import java.util.function.Supplier;
 
 public class CircleDetails implements Serializable {
+    @Serial
+    private static final long serialVersionUID = 2L;
     private final int level;
     public List<SpellDetails> spells;
     CircleDetails(int lvl){

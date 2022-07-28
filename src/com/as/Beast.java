@@ -1,8 +1,11 @@
 package com.as;
 
+import java.io.Serial;
 import java.io.Serializable;
 
 public class Beast implements Serializable {
+    @Serial
+    private static final long serialVersionUID = 5L;
     private String name;
     private String classs;
     private String level;

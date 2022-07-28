@@ -1,10 +1,13 @@
 package com.as.casting;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 public class SpellBooks implements Serializable {
+    @Serial
+    private static final long serialVersionUID = 3L;
     public List<CircleDetails> book;
     public SpellBooks(){
         book=new ArrayList<>();

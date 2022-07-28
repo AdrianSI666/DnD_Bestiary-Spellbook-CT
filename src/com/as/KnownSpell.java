@@ -1,9 +1,12 @@
 package com.as;
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 public class KnownSpell implements Serializable {
+    @Serial
+    private static final long serialVersionUID = 8L;
     public List<Circle> book;
     KnownSpell(){
         book=new ArrayList<>();
