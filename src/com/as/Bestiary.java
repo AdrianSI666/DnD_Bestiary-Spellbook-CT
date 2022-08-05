@@ -5,6 +5,7 @@ import com.as.casting.SpellDetails;
 import com.as.casting.Spellbook;
 import com.as.casting.SpellsDetails;
 import com.as.tracker.CombatTracker;
+import com.as.tracker.MassCombatTracker;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
@@ -20,7 +21,6 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.concurrent.atomic.AtomicInteger;
-import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
 public class Bestiary extends JFrame {
@@ -338,6 +338,7 @@ public class Bestiary extends JFrame {
     private JPanel CreatureListTemplate;
     private JButton ShowListButton;
     private JButton OpenInDetailsButton;
+    private JButton massCombatTrackerButton;
     private Beasts beastList;
     private boolean saved;
     private int FindRepeat = 0;
@@ -1027,12 +1028,20 @@ public class Bestiary extends JFrame {
         combatTrackerButton.addActionListener(e -> {
             JFrame combatTracker = new JFrame();
             CombatTracker panel;
-            if (beastList != null) panel = new CombatTracker(beastList);
-            else panel = new CombatTracker(beastList);
+            panel = new CombatTracker(beastList);
             combatTracker.setContentPane(panel.getTracker());
             combatTracker.setDefaultCloseOperation(combatTracker.DISPOSE_ON_CLOSE);
             combatTracker.setSize(1600, 400);
             combatTracker.setVisible(true);
+        });
+        massCombatTrackerButton.addActionListener(e -> {
+            JFrame massCombatTracker = new JFrame();
+            MassCombatTracker panel;
+            panel = new MassCombatTracker(beastList);
+            massCombatTracker.setContentPane(panel.getTracker());
+            massCombatTracker.setDefaultCloseOperation(massCombatTracker.DISPOSE_ON_CLOSE);
+            massCombatTracker.setSize(1600, 400);
+            massCombatTracker.setVisible(true);
         });
         ShowListButton.addActionListener(e -> CreatureListPane.setVisible(!CreatureListPane.isVisible()));
         CreatureListTemplate.setLayout(new BoxLayout(CreatureListTemplate, BoxLayout.PAGE_AXIS));
