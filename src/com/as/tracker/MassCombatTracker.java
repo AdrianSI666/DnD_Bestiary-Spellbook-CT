@@ -8,10 +8,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.*;
 import java.util.List;
-import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.*;
 import java.util.stream.Collectors;
 
 public class MassCombatTracker {
@@ -462,35 +459,46 @@ public class MassCombatTracker {
             } else {
                 hp = Integer.parseInt(curHpString);
             }
-            int howManyAttacks = rollHowManyAttack(isFirstTime, dmgMultip, random, unitAmount, advantage, disadvantage);
-            dmgMultip.setText(howManyAttacks + "");
-            curhp.setText(hp - (dmg * howManyAttacks) + "");
-            unitAmount.setText((int) (Math.ceil(Double.parseDouble(curhp.getText()) / (double) oneUnitMaxHp)) + "");
+            final int[] howManyAttacks = new int[1];
+            if (dmgMultip.getText() == null || dmgMultip.getText().equals("") || !isFirstTime) {
+                howManyAttacks[0] = random.nextInt(Integer.parseInt(unitAmount.getText())) + 1;
+            } else {
+                howManyAttacks[0] = Integer.parseInt(dmgMultip.getText());
+            }
+            dmgMultip.setText(howManyAttacks[0] + "");
+            ExecutorService executor = Executors.newFixedThreadPool(1);
+            CompletableFuture.runAsync(() -> {
+                try {
+                    TimeUnit.SECONDS.sleep(1);
+                    if (advantage.isSelected() && !disadvantage.isSelected()) {
+                        int secondAmount = random.nextInt(Integer.parseInt(unitAmount.getText())) + 1;
+                        dmgMultip.setText(secondAmount + "");
+                        TimeUnit.SECONDS.sleep(1);
+                        if (howManyAttacks[0] < secondAmount) howManyAttacks[0] = secondAmount;
+                        dmgMultip.setText(howManyAttacks[0] + "");
+                        curhp.setText(hp - (dmg * howManyAttacks[0]) + "");
+                        unitAmount.setText((int) (Math.ceil(Double.parseDouble(curhp.getText()) / (double) oneUnitMaxHp)) + "");
+                    } else if (disadvantage.isSelected() && !advantage.isSelected()) {
+                        int secondAmount = random.nextInt(Integer.parseInt(unitAmount.getText())) + 1;
+                        dmgMultip.setText(secondAmount + "");
+                        TimeUnit.SECONDS.sleep(1);
+                        if (howManyAttacks[0] > secondAmount) howManyAttacks[0] = secondAmount;
+                        dmgMultip.setText(howManyAttacks[0] + "");
+                        curhp.setText(hp - (dmg * howManyAttacks[0]) + "");
+                        unitAmount.setText((int) (Math.ceil(Double.parseDouble(curhp.getText()) / (double) oneUnitMaxHp)) + "");
+                    } else {
+                        dmgMultip.setText(howManyAttacks[0] + "");
+                        curhp.setText(hp - (dmg * howManyAttacks[0]) + "");
+                        unitAmount.setText((int) (Math.ceil(Double.parseDouble(curhp.getText()) / (double) oneUnitMaxHp)) + "");
+                    }
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
+            }, executor);
+            executor.shutdown();
         } catch (NumberFormatException exception) {
             dmgDelt.setText("Can't convert hp to number");
         }
-    }
-
-    public int rollHowManyAttack(boolean isFirstTime, JTextField dmgMultip, Random random, JTextField unitAmount, JCheckBox advantage, JCheckBox disadvantage) {
-        int howManyAttacks;
-        if (dmgMultip.getText() == null || dmgMultip.getText().equals("") || !isFirstTime) {
-            howManyAttacks = random.nextInt(Integer.parseInt(unitAmount.getText())) + 1;
-        } else {
-            howManyAttacks = Integer.parseInt(dmgMultip.getText());
-        }
-        dmgMultip.setText(howManyAttacks + "");
-        if (isFirstTime) {
-            if (advantage.isSelected() && !disadvantage.isSelected()) {
-                int secondAmount = rollHowManyAttack(false, dmgMultip, random, unitAmount, advantage, disadvantage);
-                if (howManyAttacks > secondAmount) return howManyAttacks;
-                else return secondAmount;
-            } else if (disadvantage.isSelected() && !advantage.isSelected()) {
-                int secondAmount = rollHowManyAttack(false, dmgMultip, random, unitAmount, advantage, disadvantage);
-                if (howManyAttacks > secondAmount) return secondAmount;
-                else return howManyAttacks;
-            }
-        }
-        return howManyAttacks;
     }
 
     //TODO no way to save morales, unit amounts, curHps and statuses when reseting.
