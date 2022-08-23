@@ -987,18 +987,18 @@ public class Bestiary extends JFrame {
             if (idr > -1) readBeast(idr);
         });
         readButton.addActionListener(e -> {
-            JsonReader reader = null;
+            JsonReader reader;
             try {
                 reader = new JsonReader(new FileReader("beasts.json"));
                 beastList = gson.fromJson(reader, BEAST_TYPE);
             } catch (FileNotFoundException err) {
-                beastList=new Beasts();
+                beastList = new Beasts();
             }
             try {
                 reader = new JsonReader(new FileReader("spells.json"));
                 spellBooks = gson.fromJson(reader, SPELLBOOK_TYPE);
             } catch (FileNotFoundException err) {
-                spellBooks=new SpellBooks();
+                spellBooks = new SpellBooks();
             }
             readBeast(beastList.beasts.size() - 1);
             /*try {
@@ -1040,7 +1040,7 @@ public class Bestiary extends JFrame {
             panel = new MassCombatTracker(beastList);
             massCombatTracker.setContentPane(panel.getTracker());
             massCombatTracker.setDefaultCloseOperation(massCombatTracker.DISPOSE_ON_CLOSE);
-            massCombatTracker.setSize(1600, 400);
+            massCombatTracker.setSize(1700, 400);
             massCombatTracker.setVisible(true);
         });
         ShowListButton.addActionListener(e -> CreatureListPane.setVisible(!CreatureListPane.isVisible()));
@@ -1960,7 +1960,7 @@ public class Bestiary extends JFrame {
             selectForBestiary.addActionListener(e -> {
                 AtomicInteger selID = new AtomicInteger();
                 beastList.beasts.forEach(beast1 -> {
-                    if (beast.getName().equals(beast1.getName()) && beast.getLevel().equals(beast1.getLevel())){
+                    if (beast.getName().equals(beast1.getName()) && beast.getLevel().equals(beast1.getLevel())) {
                         reset();
                         readBeast(selID.get());
                     }

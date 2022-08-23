@@ -342,19 +342,24 @@ public class CombatTracker {
                 CreaturesPane.remove(copyPanel);
                 CreaturesPane.revalidate();
             });
-            JTextField CopydmgDelt=new JTextField();
+            JTextField CopydmgDelt = new JTextField();
             CopydmgDelt.setColumns(8);
             JButton CopydmgDeltButton = new JButton("Deal dmg");
-            CopydmgDeltButton.addActionListener(e->{
-                try{
+            CopydmgDeltButton.addActionListener(e -> {
+                try {
                     int Copydmg = Integer.parseInt(CopydmgDelt.getText());
-                    int Copyhp =  Integer.parseInt(Copycurhp.getText());
                     int CopymaxHp = Integer.parseInt(Copymaxhp.getText());
-                    if(Copydmg<0&&Copyhp-Copydmg>CopymaxHp)Copycurhp.setText(CopymaxHp+"");
-                    else {
-                        Copycurhp.setText(Copyhp-Copydmg + "");
+                    int Copyhp;
+                    if (Copycurhp.getText() == null) {
+                        Copyhp = CopymaxHp;
+                    } else {
+                        Copyhp = Integer.parseInt(Copycurhp.getText());
                     }
-                }catch (NumberFormatException exception){
+                    if (Copydmg < 0 && Copyhp - Copydmg > CopymaxHp) Copycurhp.setText(CopymaxHp + "");
+                    else {
+                        Copycurhp.setText(Copyhp - Copydmg + "");
+                    }
+                } catch (NumberFormatException exception) {
                     CopydmgDelt.setText("Can't convert hp to number");
                 }
             });
@@ -376,19 +381,24 @@ public class CombatTracker {
             CreaturesPane.add(copyPanel);
             CreaturesPane.revalidate();
         });
-        JTextField dmgDelt=new JTextField();
+        JTextField dmgDelt = new JTextField();
         dmgDelt.setColumns(8);
         JButton dmgDeltButton = new JButton("Deal dmg");
-        dmgDeltButton.addActionListener(e->{
-            try{
+        dmgDeltButton.addActionListener(e -> {
+            try {
                 int dmg = Integer.parseInt(dmgDelt.getText());
-                int hp =  Integer.parseInt(curhp.getText());
                 int maxHp = Integer.parseInt(maxhp.getText());
-                if(dmg<0&&hp-dmg>maxHp)curhp.setText(maxHp+"");
-                else {
-                    curhp.setText(hp-dmg + "");
+                int hp;
+                if (curhp.getText() == null) {
+                    hp = maxHp;
+                } else {
+                    hp = Integer.parseInt(maxhp.getText());
                 }
-            }catch (NumberFormatException exception){
+                if (dmg < 0 && hp - dmg > maxHp) curhp.setText(maxHp + "");
+                else {
+                    curhp.setText(hp - dmg + "");
+                }
+            } catch (NumberFormatException exception) {
                 dmgDelt.setText("Can't convert hp to number");
             }
         });
