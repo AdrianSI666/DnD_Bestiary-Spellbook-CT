@@ -386,11 +386,6 @@ public class Bestiary extends JFrame {
                 lista.add(ASTstr);
                 lista.add(VSTstr);
                 listaCheck.add(PSTstr);     //checkboxy osobno, po koleji dla skilli zerowy zawsze dla Saving Throwa
-
-                //lista.add(AAthletics);
-                //lista.add(VAthletics);
-                //listaCheck.add(PAthletics); //reczny sposob
-
                 Component[] Profs = SProfs.getComponents(); //sposob z 4 rownymi layaoutami
                 Component[] Values = SValues.getComponents();
                 Component[] Added = SAdded.getComponents();
@@ -644,29 +639,7 @@ public class Bestiary extends JFrame {
             JTextField add = (JTextField) STAdd[button];
             JLabel label = (JLabel) STLabel[button];
             String[] reg = {"Str", "Dex", "Con", "Int", "Wis", "Cha", "Arc"};
-            check.addActionListener(e -> {
-                int pureStat = readStat(label, reg);
-                int mod = getMod(add);
-                int pureProf = getMod(Profieciency);
-                if (check.isSelected()) {
-                    value.setText(pureProf + pureStat + mod + "");
-                } else {
-                    value.setText(pureStat + mod + "");
-                }
-            });
-            add.addKeyListener(new KeyAdapter() {
-                @Override
-                public void keyTyped(KeyEvent e) {
-                    int pureStat = readStat(label, reg);
-                    int mod = getTyped(e, add);
-                    int pureProf = getMod(Profieciency);
-                    if (check.isSelected()) {
-                        value.setText(pureProf + pureStat + mod + "");
-                    } else {
-                        value.setText(pureStat + mod + "");
-                    }
-                }
-            });
+            profCheckAction(check, value, add, label, reg);
         }
         for (int button = 0; button < Profs.length - 1; button++) {
             JCheckBox check = (JCheckBox) Profs[button];
@@ -674,29 +647,7 @@ public class Bestiary extends JFrame {
             JTextField add = (JTextField) Added[button];
             JLabel label = (JLabel) Labels[button];
             String[] reg = {"(Str)", "(Dex)", "(Con)", "(Int)", "(Wis)", "(Cha)", "(Arc)"};
-            check.addActionListener(e -> {
-                int pureStat = readStat(label, reg);
-                int mod = getMod(add);
-                int pureProf = getMod(Profieciency);
-                if (check.isSelected()) {
-                    value.setText(pureProf + pureStat + mod + "");
-                } else {
-                    value.setText(pureStat + mod + "");
-                }
-            });
-            add.addKeyListener(new KeyAdapter() {
-                @Override
-                public void keyTyped(KeyEvent e) {
-                    int pureStat = readStat(label, reg);
-                    int mod = getTyped(e, add);
-                    int pureProf = getMod(Profieciency);
-                    if (check.isSelected()) {
-                        value.setText(pureProf + pureStat + mod + "");
-                    } else {
-                        value.setText(pureStat + mod + "");
-                    }
-                }
-            });
+            profCheckAction(check, value, add, label, reg);
         }
         APasiveWisdom.addKeyListener(new KeyAdapter() {
             @Override
@@ -1001,19 +952,6 @@ public class Bestiary extends JFrame {
                 spellBooks = new SpellBooks();
             }
             readBeast(beastList.beasts.size() - 1);
-            /*try {
-                ObjectInputStream ois = new ObjectInputStream(new FileInputStream("bestiary.dat"));
-                beastList=(Beasts) ois.readObject();
-                readBeast(beastList.beasts.size()-1);
-            } catch (FileNotFoundException error) {
-                beastList=new Beasts();
-            } catch (IOException er) {
-                er.printStackTrace();
-            } catch (ClassNotFoundException error2) {
-                error2.printStackTrace();
-            } catch (IndexOutOfBoundsException err){
-
-            }*/
         });
         spellbookButton.addActionListener(e -> {
             JFrame spellbook = new JFrame();
@@ -1040,7 +978,7 @@ public class Bestiary extends JFrame {
             panel = new MassCombatTracker(beastList);
             massCombatTracker.setContentPane(panel.getTracker());
             massCombatTracker.setDefaultCloseOperation(massCombatTracker.DISPOSE_ON_CLOSE);
-            massCombatTracker.setSize(1700, 400);
+            massCombatTracker.setSize(1730, 400);
             massCombatTracker.setVisible(true);
         });
         ShowListButton.addActionListener(e -> CreatureListPane.setVisible(!CreatureListPane.isVisible()));
@@ -1143,6 +1081,32 @@ public class Bestiary extends JFrame {
             combatTracker.setDefaultCloseOperation(combatTracker.DISPOSE_ON_CLOSE);
             combatTracker.setSize(1100, 500);
             combatTracker.setVisible(true);
+        });
+    }
+
+    private void profCheckAction(JCheckBox check, JTextField value, JTextField add, JLabel label, String[] reg) {
+        check.addActionListener(e -> {
+            int pureStat = readStat(label, reg);
+            int mod = getMod(add);
+            int pureProf = getMod(Profieciency);
+            if (check.isSelected()) {
+                value.setText(pureProf + pureStat + mod + "");
+            } else {
+                value.setText(pureStat + mod + "");
+            }
+        });
+        add.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                int pureStat = readStat(label, reg);
+                int mod = getTyped(e, add);
+                int pureProf = getMod(Profieciency);
+                if (check.isSelected()) {
+                    value.setText(pureProf + pureStat + mod + "");
+                } else {
+                    value.setText(pureStat + mod + "");
+                }
+            }
         });
     }
 
@@ -1994,12 +1958,5 @@ public class Bestiary extends JFrame {
         } catch (IOException er) {
             er.printStackTrace();
         }
-        /*try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("bestiary.dat"))) {
-            out.writeObject(beastList);
-        } catch (FileNotFoundException er) {
-            er.printStackTrace();
-        } catch (IOException er) {
-            er.printStackTrace();
-        }*/
     }
 }

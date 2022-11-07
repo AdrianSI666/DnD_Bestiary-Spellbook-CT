@@ -31,6 +31,7 @@ public class CombatTracker {
     private JButton ResetListButton;
     private JButton ShowListButton;
     private JPanel CreatureListTemplate;
+    private JButton ResetTurn;
     private final Beasts beastList;
     private List<Beast> currentBattle = new ArrayList<>();
 
@@ -52,6 +53,9 @@ public class CombatTracker {
         BeastsTemplate.setLayout(new BoxLayout(BeastsTemplate, BoxLayout.PAGE_AXIS));
         JPanel template = new JPanel();
         template.setLayout(new FlowLayout());
+        JCheckBox Templateactive = new JCheckBox();
+        Templateactive.setEnabled(false);
+        Templateactive.setSelected(true);
         JTextField Templateinitiative = new JTextField("Initiative");
         Templateinitiative.setColumns(5);
         Templateinitiative.setEditable(false);
@@ -98,6 +102,7 @@ public class CombatTracker {
         TemplatedmgDelt.setEnabled(false);
         JButton TemplateDealButton = new JButton("Deal dmg");
         TemplateDealButton.setEnabled(false);
+        template.add(Templateactive);
         template.add(Templateinitiative);
         template.add(Templatename);
         template.add(Templateattacks);
@@ -218,6 +223,16 @@ public class CombatTracker {
                 readSideList();
             }
         });
+        ResetTurn.addActionListener(e -> {
+            Component[] components = CreaturesPane.getComponents();
+            for (Component component : components) {
+                JPanel beast = (JPanel) component;
+                Component[] stats = beast.getComponents();
+                JCheckBox active = (JCheckBox) stats[0];
+                active.setSelected(true);
+            }
+            CreaturesPane.revalidate();
+        });
     }
 
     private void readSideList() {
@@ -266,6 +281,8 @@ public class CombatTracker {
         //Można, zamiast robić 'vektor' na zwierze to zrobić nowe i przepisać wszystkie pola co są potrzebne do detali do niego.
         JPanel newBeast = new JPanel();
         newBeast.setLayout(new FlowLayout());
+        JCheckBox active = new JCheckBox();
+        active.setSelected(true);
         JTextField initiative = new JTextField(beast[0].getInit() + "");
         initiative.setColumns(5);
         JTextField name = new JTextField(beast[0].getName() + "");
@@ -312,6 +329,8 @@ public class CombatTracker {
             JPanel copyPanel = new JPanel();
             copyPanel.setLayout(new FlowLayout());
             Beast copyBeast = new Beast();
+            JCheckBox Copyactive = new JCheckBox();
+            Copyactive.setSelected(active.isSelected());
             JTextField Copyinitiative = new JTextField(initiative.getText());
             Copyinitiative.setColumns(5);
             JTextField Copyname = new JTextField(name.getText());
@@ -363,6 +382,7 @@ public class CombatTracker {
                     CopydmgDelt.setText("Can't convert hp to number");
                 }
             });
+            copyPanel.add(Copyactive);
             copyPanel.add(Copyinitiative);
             copyPanel.add(Copyname);
             copyPanel.add(Copyattacks);
@@ -402,6 +422,7 @@ public class CombatTracker {
                 dmgDelt.setText("Can't convert hp to number");
             }
         });
+        newBeast.add(active);
         newBeast.add(initiative);
         newBeast.add(name);
         newBeast.add(attacks);
@@ -436,23 +457,23 @@ public class CombatTracker {
         for (Component component : components) {
             JPanel beast = (JPanel) component;
             Component[] stats = beast.getComponents();
-            JTextField init = (JTextField) stats[0];
+            JTextField init = (JTextField) stats[1];
             initiatives.add(init.getText());
-            init = (JTextField) stats[1];
+            init = (JTextField) stats[2];
             names.add(init.getText());
-            JTextArea atak = (JTextArea) stats[2];
+            JTextArea atak = (JTextArea) stats[3];
             attacks.add(atak.getText());
-            init = (JTextField) stats[3];
+            init = (JTextField) stats[4];
             maxhps.add(init.getText());
-            init = (JTextField) stats[5];
-            kpsieczs.add(init.getText());
             init = (JTextField) stats[6];
-            kpobuchs.add(init.getText());
+            kpsieczs.add(init.getText());
             init = (JTextField) stats[7];
-            kpklots.add(init.getText());
+            kpobuchs.add(init.getText());
             init = (JTextField) stats[8];
-            speeds.add(init.getText());
+            kpklots.add(init.getText());
             init = (JTextField) stats[9];
+            speeds.add(init.getText());
+            init = (JTextField) stats[10];
             manas.add(init.getText());
         }
         for (int i = 0; i < currentBattle.size(); i++) {
