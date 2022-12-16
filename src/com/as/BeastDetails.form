@@ -1163,7 +1163,10 @@
                     <children>
                       <scrollpane id="bfd83" binding="FnT">
                         <constraints>
-                          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                            <minimum-size width="152" height="14"/>
+                            <maximum-size width="200" height="-1"/>
+                          </grid>
                         </constraints>
                         <properties/>
                         <border type="none"/>
@@ -1179,7 +1182,10 @@
                       </scrollpane>
                       <scrollpane id="35924" binding="Eq">
                         <constraints>
-                          <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                          <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                            <minimum-size width="152" height="14"/>
+                            <maximum-size width="200" height="-1"/>
+                          </grid>
                         </constraints>
                         <properties/>
                         <border type="none"/>
@@ -1195,7 +1201,10 @@
                       </scrollpane>
                       <scrollpane id="81d42" binding="LangnProf">
                         <constraints>
-                          <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                          <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                            <minimum-size width="152" height="14"/>
+                            <maximum-size width="200" height="-1"/>
+                          </grid>
                         </constraints>
                         <properties/>
                         <border type="none"/>
@@ -1243,7 +1252,10 @@
                       </component>
                       <scrollpane id="cfa8f" binding="ScrollAnS">
                         <constraints>
-                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                            <minimum-size width="152" height="14"/>
+                            <maximum-size width="200" height="-1"/>
+                          </grid>
                         </constraints>
                         <properties/>
                         <border type="none"/>
