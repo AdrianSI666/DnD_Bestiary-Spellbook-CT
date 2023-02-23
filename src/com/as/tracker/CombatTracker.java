@@ -274,7 +274,7 @@ public class CombatTracker {
                         .filter(beast1 -> beast1.getName().equals(monsterComboBox.getSelectedItem().toString()))
                         .findFirst()
                         .orElseThrow(() -> null);
-            } catch (Throwable ex) {
+            } catch (Exception ex) {
                 System.out.println("Error in finding beast: " + ex.getMessage());
             }
         }
@@ -369,7 +369,7 @@ public class CombatTracker {
                     int Copydmg = Integer.parseInt(CopydmgDelt.getText());
                     int CopymaxHp = Integer.parseInt(Copymaxhp.getText());
                     int Copyhp;
-                    if (Copycurhp.getText() == null) {
+                    if (Objects.equals(Copycurhp.getText(), "") || Copycurhp.getText() == null) {
                         Copyhp = CopymaxHp;
                     } else {
                         Copyhp = Integer.parseInt(Copycurhp.getText());
@@ -409,10 +409,10 @@ public class CombatTracker {
                 int dmg = Integer.parseInt(dmgDelt.getText());
                 int maxHp = Integer.parseInt(maxhp.getText());
                 int hp;
-                if (curhp.getText() == null) {
+                if (Objects.equals(curhp.getText(), "")  || curhp.getText() == null) {
                     hp = maxHp;
                 } else {
-                    hp = Integer.parseInt(maxhp.getText());
+                    hp = Integer.parseInt(curhp.getText());
                 }
                 if (dmg < 0 && hp - dmg > maxHp) curhp.setText(maxHp + "");
                 else {
