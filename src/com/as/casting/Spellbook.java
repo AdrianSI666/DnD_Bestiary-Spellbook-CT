@@ -53,8 +53,75 @@ public class Spellbook {
     private SpellBooks spellBooks;
     private SpellBooks originalBook = new SpellBooks();
     private boolean filtered = false;
-    private static final String[] schools = {"", "Conjuration", "Necromancy", "Evocation", "Abjuration", "Transmutation", "Divination", "Enchantment", "Illusion"};
-    private static final String[] elementals = {"", "Fire", "Water", "Earth", "Air", "Light", "Darkness", "Neutral"};
+    //Schools of magic, made custom to out dnd, you can change naming as you like in here
+    private static final String[] schools = {"",
+            "Destrukcji",
+            "Kontroli",
+            "Paktu",
+            "Sprowadzenia",
+            "Przenoszenia",
+            "Obrony",
+            "Negacji",
+            "Witalności",
+            "Zrozumienia",
+            "Prawdziwej Wizji",
+            "Psychiki",
+            "Wzmocnienia",
+            "Związania",
+            "Cienia",
+            "Mirażu",
+            "Konfuzji",
+            "Krwi",
+            "Animacji",
+            "Zniszczenia",
+            "Formy",
+            "Przekształcenia",
+            "Grawitacji"
+    };
+    //Element of spell, in original dnd5e it doesn't exists so you can just use empty string: "" or delete every string besides it.
+    private static final String[] elementals = {"",
+            "Ogień",
+            "Woda",
+            "Ziemia",
+            "Powietrze",
+            "Jasność",
+            "Ciemność",
+            "Para",
+            "Lawa",
+            "Dym",
+            "Blask",
+            "Chaos",
+            "Błoto",
+            "Lód",
+            "Życiodajność",
+            "Krew",
+            "Piasek",
+            "Bariera",
+            "Korupcja",
+            "Dźwięk",
+            "Błyskawica",
+            "Neutralny",
+            "Metal",
+            "Mróźny Płomień",
+            "Plasma",
+            "Wrząca Krew",
+            "Popiół",
+            "Eksplozja",
+            "Piekielny Ogień",
+            "Święty Ogień",
+            "Ognista Burza",
+            "Czarny Płomień",
+            "Trucizna",
+            "Drewno",
+            "Kwas",
+            "Grzyby",
+            "Trupia Mgła",
+            "Psychika",
+            "Grawitacja",
+            "Rozkład",
+            "Kryształ",
+            "Moc Astralna"
+    };
     private static final java.lang.reflect.Type SPELL_TYPE = new TypeToken<SpellBooks>() {
     }.getType();
 
