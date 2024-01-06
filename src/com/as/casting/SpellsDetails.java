@@ -31,6 +31,8 @@ public class SpellsDetails {
     private JPanel Classes;
     private JComboBox<String> SpellElemental;
     private JComboBox<String> SpellSchool;
+    private JScrollPane DescriptionLong;
+    private JTextArea SpellDescriptionLong;
     private final SpellDetails currentSpell;
     private final SpellBooks spellBooks;
     private int oldSpellLevel;
@@ -128,6 +130,9 @@ public class SpellsDetails {
         SpellDescription.setText(currentSpell.getDescription());
         SpellDescription.setLineWrap(true);
         SpellDescription.setWrapStyleWord(true);
+        SpellDescriptionLong.setText(currentSpell.getDescriptionLong());
+        SpellDescriptionLong.setLineWrap(true);
+        SpellDescriptionLong.setWrapStyleWord(true);
         ClassesPane.setLayout(new BoxLayout(ClassesPane, BoxLayout.PAGE_AXIS));
         currentSpell.getClasses().forEach(classs -> {
             JPanel oneClass = new JPanel(new FlowLayout());
@@ -176,6 +181,7 @@ public class SpellsDetails {
         spellBooks.book.get(oldSpellLevel).getSpell(SpellId.getText()).setComponents(SpellComonents.getText());
         spellBooks.book.get(oldSpellLevel).getSpell(SpellId.getText()).setDuration(SpellDuration.getText());
         spellBooks.book.get(oldSpellLevel).getSpell(SpellId.getText()).setDescription(SpellDescription.getText());
+        spellBooks.book.get(oldSpellLevel).getSpell(SpellId.getText()).setDescriptionLong(SpellDescriptionLong.getText());
         ArrayList<String> spellClassList = new ArrayList<>();
         for (Component component : ClassesPane.getComponents()) {
             JPanel oneSpell = (JPanel) component;

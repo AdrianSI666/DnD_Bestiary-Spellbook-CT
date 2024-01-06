@@ -20,6 +20,7 @@ public class SpellDetails implements Serializable {
     private String description;
     private String elemental;
     private List<String> classes;
+    private String descriptionLong;
 
     public SpellDetails(String name, String manacost, String school, String castTime, String range, String duration, String components, List<String> classes, int level, String description, String elemental) {
         this.id= UUID.randomUUID();
@@ -124,6 +125,14 @@ public class SpellDetails implements Serializable {
         this.components = components;
     }
 
+    public String getDescriptionLong() {
+        return descriptionLong;
+    }
+
+    public void setDescriptionLong(String descriptionLong) {
+        this.descriptionLong = descriptionLong;
+    }
+
     public UUID getId() {
         return id;
     }
@@ -141,7 +150,9 @@ public class SpellDetails implements Serializable {
                 ", components='" + components + '\'' +
                 ", duration='" + duration + '\'' +
                 ", description='" + description + '\'' +
+                ", elemental='" + elemental + '\'' +
                 ", classes=" + classes +
+                ", descriptionLong='" + descriptionLong + '\'' +
                 '}';
     }
 }
